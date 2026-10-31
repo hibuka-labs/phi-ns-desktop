@@ -1,0 +1,25 @@
+[package]
+name = "phi-ns-desktop"
+version = "0.1.0"
+edition = "2024"
+description = "Desktop capability pack (desk.*): screen, accessibility, pointer/keyboard over the cua wire stub"
+license = "MIT"
+repository = "https://github.com/hibuka-labs/phi-ns-desktop"
+readme = "README.md"
+keywords = ["agent", "capability", "codeact"]
+categories = ["development-tools"]
+# The sidecar under stub/ is its own crate (a runtime companion, never part of
+# the published pack).
+exclude = ["stub"]
+
+# Assembly (`.with_ns`) happens above this crate; the pack only speaks the
+# `phi-ns` contract — never codexec (sdk-assembly §9.3).
+[dependencies]
+phi-cap = { version = "0.1.0" }
+phi-ns = { version = "0.1.0" }
+async-trait = "0.1"
+serde_json = "1"
+
+[dev-dependencies]
+tokio = { version = "1", features = ["rt", "macros"] }
+tiktoken-rs = "0.12"

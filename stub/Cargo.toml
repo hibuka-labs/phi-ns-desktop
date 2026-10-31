@@ -1,0 +1,21 @@
+[package]
+name = "phi-ns-cua-stub"
+version = "0.1.0"
+edition = "2024"
+publish = false
+description = "cua wire stub sidecar: phi-wire-protocol JSON-lines in, cua-driver MCP out (desk.*)"
+license = "MIT"
+
+# The desktop pack's sidecar (sdk-assembly §9.7): one process that speaks the
+# mu wire to ProcessTransport and MCP to a `cua-driver` child. It never shows
+# cua's own consent windows — approval lives at the host Gate (§3.5/§4.3).
+[dependencies]
+phi-ns = { path = "../../phi-ns" }
+phi-ns-desktop = { path = ".." }
+phi-wire-protocol = { version = "0.1.0" }
+serde_json = "1"
+# Region crops only; version rides the family's (cua's) pin.
+image = "0.25"
+
+[dev-dependencies]
+tempfile = "3"
