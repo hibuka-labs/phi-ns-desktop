@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2024"
 publish = false
 description = "cua wire stub sidecar: phi-wire-protocol JSON-lines in, cua-driver MCP out (desk.*)"
-license = "MIT"
+license = "MIT OR Apache-2.0"
 
 # The desktop pack's sidecar (sdk-assembly §9.7): one process that speaks the
 # mu wire to ProcessTransport and MCP to a `cua-driver` child. It never shows
