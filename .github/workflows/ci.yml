@@ -24,3 +24,15 @@ jobs:
 
       - name: Run tests
         run: cargo test
+
+  platform-gate:
+    name: platform primitive gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: no hand-rolled HOME/USERPROFILE lookups
+        run: |
+          if grep -rnE --include='*.rs' --exclude-dir=target --exclude-dir=.git 'env::var(_os)?\("(HOME|USERPROFILE)"\)' .; then
+            echo "Banned: use the repo home-dir helper (dirs::home_dir() or the local throat) instead of raw HOME/USERPROFILE env lookups."
+            exit 1
+          fi
