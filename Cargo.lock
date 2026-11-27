@@ -165,15 +165,15 @@ checksum = "9f7c3e4beb33f85d45ae3e3a1792185706c8e16d043238c593331cc7cd313b50"
 
 [[package]]
 name = "phi-cap"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "73b1e3a0c95e7b7425d474a6fd79b763bc6c421f37f2fc21ff0fe81284560444"
+checksum = "b41a543d1f065c01bfb59ed5c15910e4f839a434b1b5e1222d5ae9529e789d0c"
 
 [[package]]
 name = "phi-ns"
-version = "0.1.0"
+version = "0.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e9e2571c46ba4dfbb0439dcae7d79df9eced38b869db7a5b201e9cc6301a4a24"
+checksum = "9ac5691aab0a86203c1299a39b302f63a18e79da0869973e474b35b7375a77f6"
 dependencies = [
  "async-trait",
  "base64 0.23.1",
@@ -187,7 +187,7 @@ dependencies = [
 
 [[package]]
 name = "phi-ns-desktop"
-version = "0.1.0"
+version = "0.1.1"
 dependencies = [
  "async-trait",
  "phi-cap",

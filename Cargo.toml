@@ -1,6 +1,6 @@
 [package]
 name = "phi-ns-desktop"
-version = "0.1.0"
+version = "0.1.1"
 edition = "2024"
 description = "Desktop capability pack (desk.*): screen, accessibility, pointer/keyboard over the cua wire stub"
 license = "MIT OR Apache-2.0"
